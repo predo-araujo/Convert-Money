@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="StyleMoney.css">
+    
     <title>Money Convert</title>
 </head>
 
@@ -27,24 +28,25 @@
         <div class="converter-para">
             <label>
                 Converter <span class="de-1">para</span>
-                <select id="Sel-dolarEuro">
-                    <option>US$ Dólar Americano</option>
-                    <option>€ Euro</option>
+                <select class="Sel-dolarEuro">
+                    <option value="dolar">US$ Dólar Americano</option>
+                    <option value="euro">€ Euro</option>
+                </select>
             </label>
         </div>
 
 
 
         <div>
-            <label>Valor
-                <input type="number">
+            <label class="valor">Valor
+                <input type="number" placeholder="RS 10.000,00" id="inputConvert">
             </label>
         </div>
 
 
 
         <div>
-            <button>Converter</button>
+            <button id="convertButton">Converter</button>
 
             <section>
                 <div>
@@ -52,7 +54,7 @@
                         <img src="../img/brasil 2.png" alt="br-convert" class="br">
                         <figcaption class="convert-number">
                             <p class="Real-Dol">Real</p>
-                            <p>R$ 10.000,00</p>
+                            <p id="BRLvalue">R$ 0,00</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -62,14 +64,15 @@
                     <figure>
                         <img src="../img/estados-unidos (1) 1.png" alt="usa-flag" class="usa">
                         <figcaption class="convert-number">
-                            <p class="Real-Dol">US$ Dólar Americano</p>
-                            <p>US$ 2.000,00</p>
+                            <p class="Real-Dol" id="USDcurrency">US$ Dólar Americano</p>
+                            <p id="OtherValue">US$ 0,00</p>
                         </figcaption>
                     </figure>
                 </div>
             </section>
     </main>
     </div>
-    
+
 </body>
+<script src="./script.js"></script>
 </html>
