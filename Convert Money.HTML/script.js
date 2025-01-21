@@ -31,5 +31,12 @@ function ConvertValues() {
 
 }
 
+function changeFlagAndName() {
+    console.log("mudando band")
+}
+
+SelectCurrency.addEventListener("change", changeFlagAndName)
+
+
 ConvButton.addEventListener("click", ConvertValues)
 
