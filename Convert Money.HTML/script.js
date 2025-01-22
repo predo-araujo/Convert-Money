@@ -1,12 +1,32 @@
 const ConvButton = document.querySelector("button#convertButton")
+const SelectedCurrency = document.querySelector("Select.SelDolarEuro")
 
+
+
+function changeFlagAndName() {
+    const OtherCurrencyText = document.querySelector("p#USDcurrency")
+    const CurrecyImg = document.querySelector("img.usaflag")
+
+    if (SelectedCurrency.value == "dolar") {
+        OtherCurrencyText.innerHTML = "$ Dólar Americano"
+        CurrecyImg.src = "../img/estados-unidos (1) 1.png"
+    }
+
+    if (SelectedCurrency.value == "euro") {
+        OtherCurrencyText.innerHTML = "€ Euro"
+        CurrecyImg.src = "../img/Design sem nome 3.png"
+    }
+    ConvertValues()    
+
+}
 function ConvertValues() {
     const InputValue = document.querySelector("input#inputConvert").value
 
     const BRLValue = document.querySelector("p#BRLvalue") // Valor Real
     const OtherCurrency = document.querySelector("p#OtherValue") // Outras Moedas
-
     const SelectCurrency = document.querySelector("Select.SelDolarEuro").value
+    
+    
 
 
     const dolarToday = 6.09
@@ -31,12 +51,10 @@ function ConvertValues() {
 
 }
 
-function changeFlagAndName() {
-    console.log("mudando band")
-}
-
-SelectCurrency.addEventListener("change", changeFlagAndName)
-
-
 ConvButton.addEventListener("click", ConvertValues)
+
+SelectedCurrency.addEventListener("change", changeFlagAndName)
+
+
+
 
