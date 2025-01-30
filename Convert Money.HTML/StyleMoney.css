@@ -57,7 +57,7 @@ section {
 }
 
 
-#SelectReal {
+#SelConvertCurrency {
   width: 327px;
   height: 48px;
   font-weight: 700;
@@ -80,7 +80,7 @@ section {
 }
 
 
-.SelDolarEuro {
+.SelCurrencyCoverted {
   width: 327px;
   height: 48px;
   font-weight: 700;
