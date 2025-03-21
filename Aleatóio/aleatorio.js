@@ -1,6 +1,10 @@
 let list = document.querySelector("ul")
 let myList = ``
-
+const forEachButton = document.querySelector(".ForEach");
+const MapButton = document.querySelector(".Map");
+const ReduceButton = document.querySelector(".Reduce");
+const FilterButton = document.querySelector(".Filter");
+let mapValue = document.querySelector("#Valor")
 
 menuOptions.forEach(item => {
    myList +=
@@ -10,4 +14,23 @@ menuOptions.forEach(item => {
            <p id="Valor">R$${item.price}</p>
       </li>`
 })
-list.innerHTML = myList
+
+function mapItens () {
+     menuOptions.map(item => ({
+     ...item,
+     price: item.price*0.9 
+     }));
+
+     
+}
+
+
+forEachButton.addEventListener ("click", function ForEachFunc () {
+     list.innerHTML = myList});
+
+MapButton.addEventListener ("click", function mapItens (){
+});
+
+
+// //já consigo retornar os valores com desconto agora so
+// preciso que quando eu aperte o botao os valores apareçam em tela
